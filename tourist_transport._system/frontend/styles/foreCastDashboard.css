@@ -1,0 +1,185 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --success-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --light-bg: #f8f9fa;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--light-bg);
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .forecast-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    max-width: 380px;
+    width: 100%;
+  }
+  
+  .card-header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .card-header i {
+    font-size: 1.2rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .data-source {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .comparison-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .year-box {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .year-box.current {
+    background-color: rgba(52, 152, 219, 0.1);
+    border: 1px solid var(--primary-color);
+  }
+  
+  .year-box.previous {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+  }
+  
+  .year-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+  }
+  
+  .value {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .trend {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .trend.up {
+    color: var(--success-color);
+  }
+  
+  .trend.down {
+    color: var(--danger-color);
+  }
+  
+  .top-countries {
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-title {
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: var(--secondary-color);
+  }
+  
+  .country-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .country-tag {
+    background-color: #f0f0f0;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+  }
+  
+  .report-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .report-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .report-btn i {
+    font-size: 1rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 400px) {
+    .comparison-container {
+      flex-direction: column;
+    }
+    
+    .card-body {
+      padding: 1.25rem;
+    }
+  }
+
+/* Add the same CSS as in styles.css above */
+/* Plus add this for the spinning animation: */
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .spin {
+    animation: spin 1s linear infinite;
+  }
+  
+  .generating {
+    background-color: #95a5a6;
+  }
